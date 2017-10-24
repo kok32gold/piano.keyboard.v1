@@ -1,0 +1,29 @@
+.keyboard-key {
+  border: 1px solid black;
+  width: 50px;
+  height: 400px;
+  background-color: whitesmoke;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.keyboard-key.play {
+    background-color: #e0dfdf;
+}
+
+.keyboard-key.diez {
+  position: absolute;
+  height: 250px;
+  z-index: 3;
+  left: 30px;
+  width: 40px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.keyboard-key.diez.play {
+    background-color: #565555;
+}
+.relative {
+  position: relative;
+}

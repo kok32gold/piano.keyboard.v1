@@ -1,0 +1,27 @@
+<!-- <div class="d-flex flex-row w-100">
+  <div class="keyboard-select p-1" *ngFor="let item of keyboardRange" (click)="changeKeyboard(item)">
+    <button type="button" class="btn btn-default btn-lg" [ngClass]="{'btn-primary': isKeyboardSelected(item) }"> C{{ item.min }} - C{{ item.max }}</button>
+  </div>
+  <div class="instrument-select p-1" *ngFor="let item of instrumentsArr" (click)="changeInstrument(item)">
+    <button type="button" class="btn btn-lg" [ngClass]="{'btn-primary': item == globals.instrument, 'btn-info': !(item == globals.instrument)  }">{{ item }}</button>
+  </div>
+</div> -->
+
+<div class="d-flex flex-row w-50">
+  <div class="w-50 p-3">
+    <span class="mb-2">Keyboard Key Set:</span>
+    <select class="form-control" [(ngModel)]="currentKeyboard" (ngModelChange)="changeKeyboard($event)">
+      <option *ngFor="let item of keyboardRange" [ngValue]="item">
+         C{{ item.min }} - C{{ item.max }}
+       </option>
+    </select>
+  </div>
+  <div class="w-50 p-3">
+    <span class="mb-2">Instrument:</span>
+    <select class="form-control" [(ngModel)]="currentInstrument" (ngModelChange)="changeInstrument($event)">
+      <option *ngFor="let item of instrumentsArr" [value]="item">
+         {{ item }}
+       </option>
+    </select>
+  </div>
+</div>

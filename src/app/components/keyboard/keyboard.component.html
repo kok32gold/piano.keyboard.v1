@@ -1,0 +1,5 @@
+<div class="d-flex d-flex-row justify-content-center w-100">
+  <div class="d-flex d-flex-column" *ngFor="let octave of globals.getKeyboardArray()">
+      <app-keyboard-key *ngFor="let note of notesArr" [note]="note" [octave]="octave" [play]="play"></app-keyboard-key>
+  </div>
+</div>

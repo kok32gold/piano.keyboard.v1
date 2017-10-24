@@ -1,0 +1,12 @@
+<div class="relative">
+  <div class="p-1 keyboard-key diez d-flex align-items-end justify-content-center" *ngIf="isDiez" (click)="playSound(true)" [ngClass]="{ 'play' : isPlayDiez }">
+    <span class="note-text">
+      {{ note }}-{{ octave }}
+    </span>
+  </div>
+  <div class="p-1 keyboard-key d-flex align-items-end justify-content-center" (click)="playSound(false)" [ngClass]="{ 'play' : isPlay }">
+    <span class="note-text">
+      {{ note }}-{{ octave }}
+    </span>
+  </div>
+</div>
